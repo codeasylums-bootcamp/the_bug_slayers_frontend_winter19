@@ -1,0 +1,106 @@
+.boldness{
+    font-size: larger;
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    margin:0 auto;
+}
+.image-wrapper{
+    height:700px;
+    margin-top: 100px;
+}
+.image-height{
+    height: 700px;
+}
+.message-wrapper {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.heading {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: #5f5d60;
+}
+.btn1 {
+    padding: 12px 24px;
+    color: white;
+    background-color: #1a7940;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 6px;
+    border: none;
+    margin: none;
+}
+.btn2{
+    padding: 12px 24px;
+    color: white;
+    background-color: #1a7940;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+}
+.btn1:hover {
+    padding: 12px 24px;
+    color: #1a7940;
+    background-color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+}
+.message {
+    padding: 15px 40px;
+    background-color: #5dca88;
+    cursor: pointer;
+    box-shadow: 0 7px #1a7940;
+}
+.message:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+  }
+  @keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .tcontainer{
+    width: 100%;
+    overflow: hidden;
+    height:100px;
+  }
+  .ticker-wrap {
+    width: 100%;
+    padding-left: 100%;
+    background-color: #eee;
+  }
+  .ticker-move {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 10s;
+  }
+  .ticker-move:hover{
+    animation-play-state: paused;
+  }
+  .ticker-item{
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 2rem;
+  }
+  .container-dynamic{
+    height:200px;
+    margin-top: 100px;
+    padding: 60px;
+}
+.btn3{
+    max-width: fit-content;
+    margin-left: 20px;
+}
+.button-bottom-spacing{
+    margin-top: 25px;
+}
