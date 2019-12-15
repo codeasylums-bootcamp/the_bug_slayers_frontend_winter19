@@ -126,3 +126,11 @@
 .button-bottom-spacing{
     margin-top: 25px;
 }
+.footer-body{
+  Margin-top: 10px;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.image{
+  height: 255px;
+}
