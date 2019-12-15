@@ -29,13 +29,13 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onload="fetchData()">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Bitcoin.png" width="30" height="30" class="d-inline-block align-top"/>
     &nbsp;&nbsp;
-      <a class="navbar-brand boldness" href="#">Navbar</a>
+      <a class="navbar-brand boldness" href="#">Cryptocurrency</a>
       <button
-        class="navbar-toggler shrink-view"
+        class="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -70,9 +70,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#news">News</a>
-              <a class="dropdown-item" href="#">Articles</a>
+              <a class="dropdown-item" href="#news">Articles</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Guide</a>
+              <a class="dropdown-item" href="#guide">Guide</a>
             </div>
           </li>
         </ul>
@@ -83,13 +83,13 @@
             placeholder="Search"
             aria-label="Search"
           /> -->
-          <button class="btn1 btn-outline-success my-2 my-sm-0  " type="submit">
+          <!-- <button class="btn1 btn-outline-success my-2 my-sm-0 " type="submit">
             Log in
           </button>
           &nbsp;&nbsp;
           <button class="btn1 btn-outline-success my-2 my-sm-0 spacing" type="submit">
             Sign in
-          </button>
+          </button> -->
         </form>
       </div>
     </nav>
@@ -101,7 +101,7 @@
       <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="1000">
-              <img src="./img/image1.jpeg" class="d-block w-100 image-height" alt="...">
+              <img src="./img/image5.jpg" class="d-block w-100 image-height" alt="...">
             </div>
             <div class="carousel-item" data-interval="2000">
               <img src="./img/image2.jpeg" class="d-block w-100 image-height" alt="...">
@@ -126,43 +126,61 @@
           <div class="heading">
             <h4>Click below for more updates</h4>
           </div>
-          <span class="btn2 message">Wallet</span>
+          <span class="btn2 message" onclick="createData()">Fetch Data</span>
         </div>
     </div>
     <div class="card-deck" id="news">
-      <div class="card">
-        <img src="./img/image1.jpeg" class="card-img-top" alt="...">
+      <div class="card" id="a">
+        <img src="./img/image2.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div id="div1">
+          </div>
+          <p class="card-text" id="data"></p>
         </div>
-        <button type="button" class="btn3 btn btn-primary">Add To Cart</button>
+        <!-- <button type="button" class="btn3 btn btn-primary" onclick="createData()">Add To Cart</button> -->
         <div class="card-footer button-bottom-spacing">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
         </div>
       </div>
-      <div class="card">
-        <img src="./img/image1.jpeg" class="card-img-top" alt="...">
+      <div class="card" id="b">
+        <img src="./img/image5.jpg" class="card-img-top image" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <div id="div2">
+
+          </div>
+          <p class="card-text"></p>
         </div>
-        <button type="button" class="btn3 btn btn-primary">Add To Cart</button>
+        <!-- <button type="button" class="btn3 btn btn-primary">Add To Cart</button> -->
         <div class="card-footer button-bottom-spacing">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
         </div>
       </div>
-      <div class="card">
-        <img src="./img/image1.jpeg" class="card-img-top" alt="...">
+      <div class="card" id="c">
+        <img src="./img/image7.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <div id="div3">
+
+          </div>
+          <p class="card-text"></p>
         </div>
-          <button type="button" class="btn3 btn btn-primary">Add To Cart</button>
+          <!-- <button type="button" class="btn3 btn btn-primary">Add To Cart</button> -->
         <div class="card-footer button-bottom-spacing">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
         </div>
       </div>
     </div>
+    <div class="card text-center">
+      <div class="card-header footer-body" id="guide">
+        Guide
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><a href="https://blockgeeks.com/guides/how-to-invest-in-cryptocurrencies/">Support Documents</a></h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer text-muted">
+        <p>&copy; 2019 Code Asylum<p>
+      </div>
+    </div>
   </body>
+  <script type="text/javascript" src="./javascript/data.js"></script>
 </html>
