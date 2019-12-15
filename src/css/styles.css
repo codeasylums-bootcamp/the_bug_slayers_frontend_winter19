@@ -1,3 +1,25 @@
+.shrink-view{
+    background-color: whitesmoke;
+}
+.body{
+    background-color: rgb(236, 232, 232);
+    background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+}
+.bg-light {
+  background-color: #0e253c!important;
+}
+.navbar-light .navbar-brand {
+  color: rgba(253, 247, 247, 0.9) !important;
+}
+.navbar-light .navbar-nav .active>.nav-link{
+  color: rgba(253, 247, 247, 0.9) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(253, 247, 247, 0.9) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(253, 247, 247, 0.9) !important;
+}
 .boldness{
     font-size: larger;
     font-weight: bold;
@@ -19,8 +41,8 @@
     text-align: center;
 }
 .heading {
-    padding-top: 60px;
-    padding-bottom: 30px;
+    padding-top: 6px;
+    padding-bottom: 0px;
     color: #5f5d60;
 }
 .btn1 {
