@@ -27,7 +27,23 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
-    ></script>
+    ></script> 
+    <script type="text/javascript" src="./javascript/data.js"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+  
+        border: 1px solid #ddd;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even){background-color: #f2f2f2}
+      </style>
   </head>
   <body onload="fetchData()">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -94,10 +110,10 @@
       </div>
     </nav>
     <div>
-      <div class="container-dynamic">
-        <marquee WIDTH="100%"><h2 class="heading" style="font-weight:bold">Start Investing in Cryptocurrency !</h2></marquee>
+      <div class="container-dynamic" style="background-image: url('./img/image8.jpg')">
+        <marquee WIDTH="100%"><h2 class="heading" style="font-weight:bold">Start Investing in the FUTURE of Currency !</h2></marquee>
     </div>
-      <div class="container">
+      <div class="container" >
       <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="1000">
@@ -121,6 +137,9 @@
         </div>
     </div>
     </div>
+    <div>
+
+    </div>
     <div class="message-wrapper">
         <div class="container">
           <div class="heading">
@@ -129,7 +148,20 @@
           <span class="btn2 message" onclick="createData()">Fetch Data</span>
         </div>
     </div>
-    <div class="card-deck" id="news">
+    <div style="height:300px;overflow:auto;">
+      <table class="tab" id="myTable" border="2px">
+          <th>RANK</th>
+          <th>NAME</th>
+          <th>SYMBOL</th>
+          <th>PRICE($)</th>
+          <th>MARKET CAP($)</th>
+          <th>TOTAL SUPPLY($)</th>
+          <th>PERCENTAGE CHANGE 1H</th>
+          <th>PERCENTAGE CHANGE 24H</th>
+          <th>PERCENTAGE CHANGE 7D</th>
+      </table>
+     </div>
+     <!-- <div class="card-deck" id="news">
       <div class="card" id="a">
         <img src="./img/image2.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -137,9 +169,9 @@
           </div>
           <p class="card-text" id="data"></p>
         </div>
-        <!-- <button type="button" class="btn3 btn btn-primary" onclick="createData()">Add To Cart</button> -->
+         <button type="button" class="btn3 btn btn-primary" onclick="createData()">Add To Cart</button>
         <div class="card-footer button-bottom-spacing">
-          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <small class="text-muted">Last updated 3 mins ago</small>
         </div>
       </div>
       <div class="card" id="b">
@@ -150,9 +182,9 @@
           </div>
           <p class="card-text"></p>
         </div>
-        <!-- <button type="button" class="btn3 btn btn-primary">Add To Cart</button> -->
+         <button type="button" class="btn3 btn btn-primary">Add To Cart</button> 
         <div class="card-footer button-bottom-spacing">
-          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+          <small class="text-muted">Last updated 3 mins ago</small> 
         </div>
       </div>
       <div class="card" id="c">
@@ -163,12 +195,12 @@
           </div>
           <p class="card-text"></p>
         </div>
-          <!-- <button type="button" class="btn3 btn btn-primary">Add To Cart</button> -->
+           <button type="button" class="btn3 btn btn-primary">Add To Cart</button> 
         <div class="card-footer button-bottom-spacing">
-          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+           <small class="text-muted">Last updated 3 mins ago</small> 
         </div>
       </div>
-    </div>
+    </div>  -->
     <div class="card text-center">
       <div class="card-header footer-body" id="guide">
         Guide
@@ -182,5 +214,5 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="./javascript/data.js"></script>
-</html>
+  
+</html> 

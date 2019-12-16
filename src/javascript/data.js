@@ -7,7 +7,7 @@ function fetchData(){
   request('GET', 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=' + apikey.key)
     .then((r1) => {
        x1 = JSON.parse(r1.target.responseText);
-
+        
     })
     .catch(err => {
       console.log(err);
@@ -24,51 +24,35 @@ function fetchData(){
    }
   }
   function createData(){
+    
 
-    for (let i = 0; i < 3; i++) {
+    var table = document.getElementById("myTable");
+       for (let i = 0; i < 40; i++) {
+        var tr = document.createElement('tr');
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
+        tr.appendChild( document.createElement('td') );
 
-      if(x1.data[i].name==='Bitcoin'){
-        const v=document.getElementById('div1');
-        const  btn=document.createElement("p");
-        const pri=document.createElement("p");
-        const mar=document.createElement("p");
-        v.innerHTML="Name: "+(x1.data[i].name);
-        btn.innerHTML="Rank: "+x1.data[i].cmc_rank;
-        pri.innerHTML="Price in USD: "+x1.data[i].quote.USD.price;
-        mar.innerHTML="Market value in USD: "+x1.data[i].quote.USD.market_cap;
-        v.appendChild(btn);
-        v.appendChild(pri);
-        v.appendChild(mar);
-        console.log(x1.data[i].name);
+        tr.cells[0].appendChild( document.createTextNode(x1.data[i].cmc_rank) );
+        tr.cells[1].appendChild( document.createTextNode(x1.data[i].name) );
+        tr.cells[2].appendChild( document.createTextNode(x1.data[i].symbol) );
+        tr.cells[3].appendChild( document.createTextNode(x1.data[i].quote.USD.price) );
+        tr.cells[4].appendChild( document.createTextNode(x1.data[i].quote.USD.market_cap) );
+        tr.cells[5].appendChild( document.createTextNode(x1.data[i].total_supply) );
+        tr.cells[6].appendChild( document.createTextNode(x1.data[i].quote.USD.market_cap) );
+        tr.cells[7].appendChild( document.createTextNode(x1.data[i].quote.USD.market_cap) );
+        tr.cells[8].appendChild( document.createTextNode(x1.data[i].quote.USD.market_cap) );
 
-      }
-      else if(x1.data[i].name==='Ethereum'){
-        const v=document.getElementById('div2');
-        const  btn=document.createElement("p");
-        const pri=document.createElement("p");
-        const mar=document.createElement("p");
-        v.innerHTML="Name: "+(x1.data[i].name);
-        btn.innerHTML="Rank: "+x1.data[i].cmc_rank;
-        pri.innerHTML="Price in USD: "+x1.data[i].quote.USD.price;
-        mar.innerHTML="Market value in USD: "+x1.data[i].quote.USD.market_cap;
-        v.appendChild(btn);
-        v.appendChild(pri);
-        v.appendChild(mar);
-      }
-      else if(x1.data[i].name==='XRP'){
-        const v=document.getElementById('div3');
-        const  btn=document.createElement("p");
-        const pri=document.createElement("p");
-        const mar=document.createElement("p");
-        v.innerHTML="Name: "+(x1.data[i].name);
-        btn.innerHTML="Rank: "+x1.data[i].cmc_rank;
-        pri.innerHTML="Price in USD: "+x1.data[i].quote.USD.price;
-        mar.innerHTML="Market value in USD: "+x1.data[i].quote.USD.market_cap;
-        v.appendChild(btn);
-        v.appendChild(pri);
-        v.appendChild(mar);
-      }
-      
-    }
+  //  tr.cells[3].appendChild( document.createTextNode(x1.data[i].cmc_rank) );
+  //  tr.cells[4].appendChild( document.createTextNode(x1.data[i].cmc_rank) );
+   // tr.cells[5].appendChild( document.createTextNode(x1.data[i].cmc_rank) );
+    table.appendChild(tr);
       
    }
+  }

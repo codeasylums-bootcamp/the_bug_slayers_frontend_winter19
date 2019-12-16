@@ -3,7 +3,7 @@
 }
 .body{
     background-color: rgb(236, 232, 232);
-    background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+    background-image: url("../css/img/image8.jpg");
 }
 .bg-light {
   background-color: #0e253c!important;
